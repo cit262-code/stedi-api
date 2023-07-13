@@ -1,4 +1,4 @@
-#© 2021 alejo Murdock
+#© 2021 Sean Murdock
 
 apiVersion: apps/v1
 kind: Deployment
@@ -16,8 +16,7 @@ spec:
     spec:
       containers:
         - name: prod-stedi-alejo
-          #image: gcr.io/cubs-consulting/stedi # This image needs to refer to the NEW Artifact registry repositorry
-          image: us-docker.pkg.dev/team5-cit262/alejo-api/stedi-api:latest # This image needs to refer to the NEW Artifact registry repositorry
+          image: us-docker.pkg.dev/team5-cit262/alejo-api/stedi-api:latest # IMAGE NEEDS TO BE ARTIFACT REGISTRY NEW REPOSITORY
           env:
             - name: REDIS_PASSWORD
               valueFrom:
